@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Hashmatique {
 	
-	HashMap<String, String> trackList;
+	private HashMap<String, String> trackList;
 	
 	public Hashmatique(String[] songNames, String[] lyrics) {
 		this.trackList = new HashMap<String, String>();
@@ -16,11 +16,15 @@ public class Hashmatique {
 		this.trackList = songMap;
 	}
 	
+	public Hashmatique() {
+		this.trackList = new HashMap<String, String>();
+	}
+	
 	public void addTrack(String song, String lyrics) {
 		trackList.put(song, lyrics);
 	}
 	
-	public HashMap<String, String> getSongs() {
+	public HashMap<String, String> getTracks() {
 		return this.trackList;
 	}
 	
@@ -36,5 +40,10 @@ public class Hashmatique {
 		}
 		
 		System.out.println("");
+	}
+	
+	@Override
+	public String toString() {
+		return String.format("There are %o tracks", trackList.keySet().size());
 	}
 }

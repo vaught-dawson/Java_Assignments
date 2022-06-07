@@ -17,6 +17,10 @@ public class TestHashmatique {
 		trackManager.displayTracks();
 		
 		System.out.println(trackManager.getTrack("The Mind Electric"));
+		
+		System.out.print("\n" + trackManager.getTracks() + "\n\n");
+		
+		System.out.println(trackManager.toString());
 	}
 
 }

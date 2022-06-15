@@ -1,0 +1,27 @@
+@charset "ISO-8859-1";
+
+* {
+	font-family: 'Radio Canada', sans-serif;
+}
+
+h1 {
+	color: pink;
+}
+
+table {
+	 border-collapse: collapse;
+	 border: 32px solid pink;
+	 width: 100%;
+}
+
+td {
+	border-top: 2px solid pink;
+	padding: 4px;
+}
+
+.content {
+	padding: 32px 10%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}

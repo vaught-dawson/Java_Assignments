@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Dojo Paga</title>
+<title>Dojo Page</title>
 <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>

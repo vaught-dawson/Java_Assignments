@@ -12,21 +12,58 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<div class="header flex-between">	
-		<h1>Expense Details</h1>
-		<a href="/expenses">Go back</a>
+	<h1>Save Travels</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Expense</th>
+				<th>Vendor</th>
+				<th>Amount</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach var="expense" items="${expenses}">
+				<tr>
+					<td><c:out value="${expense.name}"></c:out></td>
+					<td><c:out value="${expense.vendor}"></c:out></td>
+					<td><fmt:formatNumber value="${expense.amount}"
+							type="currency" /></td>
+					<td class="flex"><a href="/expenses/edit/${expense.id}">edit</a>
+						<form action="/expenses/${expense.id}" method="post">
+							<input type="hidden" name="_method" value="delete" />
+							<button
+								style="background-color: red; color: white; padding: 4px 8px; border: 2px solid black; box-shadow: 2px 2px black;">Delete</button>
+						</form></td>
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
+	<div class="form-container">
+		<form:form action="/expenses" method="post" modelAttribute="expense">
+			<h2>Add an expense:</h2>
+			<form:errors path="name" class="error" />
+			<form:errors path="vendor" class="error" />
+			<form:errors path="amount" class="error" />
+			<form:errors path="description" class="error" />
+			<div class="name">
+				<form:label path="name">Expense Name:</form:label>
+				<form:input path="name" />
+			</div>
+			<div class="vendor">
+				<form:label path="vendor">Vendor:</form:label>
+				<form:input path="vendor" />
+			</div>
+			<div class="amount">
+				<form:label path="amount">Amount:</form:label>
+				<form:input path="amount" type="double" />
+			</div>
+			<div class="description">
+				<form:label path="description">Description:</form:label>
+				<form:textarea path="description" />
+			</div>
+			<button>Submit</button>
+		</form:form>
 	</div>
-	<p>
-		Expense Name: <c:out value="${expense.name}" />
-	</p>
-	<p>
-		Expense Description: <c:out value="${expense.description}" />
-	</p>
-	<p>
-		Vendor: <c:out value="${expense.vendor}" />
-	</p>
-	<p>
-		Amount Spent: <fmt:formatNumber value="${expense.amount}" type="currency" />
-	</p>
 </body>
 </html>

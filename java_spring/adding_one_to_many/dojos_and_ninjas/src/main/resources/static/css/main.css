@@ -1,0 +1,38 @@
+body {
+	margin: 32px 10%;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: center;
+	border: 1px solid black;
+}
+
+thead {
+	background-color: darkgray;
+}
+
+td {
+	padding: 4px;
+}
+
+tr {
+	border: 1px solid black;
+}
+
+.flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+}
+.flex-between {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+button {
+	cursor: pointer;
+}

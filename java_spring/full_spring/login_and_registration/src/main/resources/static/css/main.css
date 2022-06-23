@@ -1,0 +1,60 @@
+@charset "ISO-8859-1";
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Radio Canada', sans-serif;
+}
+
+body {
+	padding: 0 5%;
+}
+
+h1, h2, h4 {
+	margin: 16px 0;
+}
+
+h1 {
+	color: #9406ff;
+}
+
+.content {
+	display: flex;
+	justify-content: space-around;
+}
+
+button {
+	padding: 4px 8px;
+	border: 2px solid black;
+	box-shadow: 2px 2px black;
+	background-color: white;
+	cursor: pointer;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+form > button {
+	width: 25%;
+	align-self: flex-end;
+}
+
+label {
+	margin-right: 8px;
+}
+
+input {
+	border: 2px solid black;
+}
+
+form > div {
+	display: flex;
+	justify-content: space-between;
+}
+
+.error {
+	color: red;
+}

@@ -1,0 +1,169 @@
+@charset "ISO-8859-1";
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Radio Canada', sans-serif;
+}
+
+body {
+	padding: 0 5%;
+}
+
+h1, h2, h4 {
+	margin: 16px 0;
+}
+
+.color-primary {
+	color: #9406ff;
+}
+
+.content {
+	display: flex;
+	justify-content: space-around;
+}
+
+button {
+	padding: 4px 8px;
+	border: 2px solid black;
+	box-shadow: 2px 2px black;
+	background-color: white;
+	cursor: pointer;
+}
+
+.button {
+	padding: 4px 8px;
+	border: 2px solid black;
+	box-shadow: 2px 2px black;
+	background-color: white;
+	cursor: pointer;
+	text-decoration: none;
+	font-style: none;
+	color: black;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+form > button {
+	width: 25%;
+	align-self: flex-end;
+}
+
+label {
+	margin-right: 8px;
+}
+
+input {
+	border: 2px solid black;
+	padding: 4px;
+}
+
+form > div {
+	display: flex;
+	justify-content: space-between;
+}
+
+.error {
+	color: red;
+}
+
+.flex {
+	display: flex;
+}
+
+.left {
+	justify-content: flex-start;
+	text-align: left;
+}
+
+.right {
+	justify-content: flex-end;
+	text-align: right;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+}
+
+.between {
+	justify-content: space-between;
+}
+
+.mb-8 {
+	margin-bottom: 8px;
+}
+
+.header {
+	margin-bottom: 32px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	border: 2px solid black;
+}
+
+th {
+	background-color: #cccccc;
+	border: 2px solid black;
+	border-bottom: none;
+	padding: 8px;
+}
+
+td {
+	background-color: #eeeeee;
+	border: 2px solid black;
+	border-bottom: none;
+	border-top: none;
+	padding: 8px;
+	text-align: center;
+}
+
+tr:nth-of-type(2)>td {
+	background-color: #ffffff;
+}
+
+.w-20p {
+	width: 20%;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.container {
+	margin: 32px;
+}
+
+.red {
+	color: red;
+}
+
+.purple {
+	color: purple;
+}
+
+.green {
+	color: green;
+}
+
+br {
+	margin: 4px;
+}
+
+hr {
+	margin: 16px 0;
+}
+
+.hidden {
+	display: none;
+}
+
+.bg-gray {
+	background-color: #dddddd;
+}
